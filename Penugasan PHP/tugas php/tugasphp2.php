@@ -12,13 +12,13 @@
 
     $bintang = 9; //variabel bintang dengan nilai sebanyak 9
 
-    for ($i = 1 ; $i<=$bintang; $i++) { //perulangan baris untuk looping pertama
+    for ($i = 1 ; $i<=$bintang; $i++) { //perulangan looping pertama untuk baris
     /*variabel i mempunyai nilai untuk diinisialisasi yang dimulai dari 1,
     kemudian dengan kondisi dimana i tidak kurang lebih dari nilai bintang yaitu 9,
     setelah itu menggunakan iterasi ++ karena apabila niali i belum sesuai dengan nilai i
     akan bertambah sesuai dengan kondisi yang ada*/
 
-        for($j = $bintang ; $j>=$i; $j--){ //perulangan kolom untuk looping kedua
+        for($j = $bintang ; $j>=$i; $j--){ //perulangan looping kedua untuk kolom
         /* apabila keadaan diatas sudah sesuai dengan kondisinya,
         dimana j >= nilai i, maka looping ini akan dijalankan.
         namun, apabila belum sesuai maka tidak akan mencetak (*) */
