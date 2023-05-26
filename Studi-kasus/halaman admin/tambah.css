@@ -1,0 +1,40 @@
+body {
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.card {
+  background-color: rgb(243, 243, 243);
+  border-color: #ece8e8;
+  border-style: solid;
+  border-width: 3px;
+  text-align: center;
+  padding: 20px 70px 0 0;
+}
+
+.form .input-control {
+  padding: 0 0 20px 50px;
+}
+
+.input-control input.error,
+select.error {
+  border: 1px solid red;
+}
+
+.input-control label.error {
+  color: red;
+  margin-left: 10px;
+}
+
+.form .submit {
+  margin: -150px 0 10px 5%;
+}
