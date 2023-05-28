@@ -33,11 +33,12 @@
                             $id_kategori = $data["id_kategori"];
                             $id_jenisBuku = $data["id_jenisBuku"];
                             $stok = $data["stok"];
-                            $harga_jual = $data["harga_jual"];;
+                            $harga_jual = $data["harga_jual"];
+                            $gambar = $data["gambar"];
                         
                     ?>
 
-                    <form id="form" action="proses edit.php" method="post" class="formhs" onsubmit="validasi()">
+                    <form id="form" action="proses edit.php" method="post" class="formhs" enctype="multipart/form-data">
                         <div class="input-control">
                             <label for="isbn" >ISBN :</label>
                             <input type="text" name="isbn" id="isbn" required value="<?php echo $data["isbn"] ?>">
@@ -79,6 +80,10 @@
                         <div class="input-control">
                             <label for="harga_jual">Harga Jual   : </label>
                             <input type="text" name="harga_jual" id="harga_jual" required value="<?php echo $data["harga_jual"]?>">
+                        </div>                 
+                        <div class="input-control">
+                            <label for="gambar">File  : </label>
+                            <input type="file" name="gambar" id="gambar" value="<?php echo $data["gambar"]?>">
                         </div>                 
                         <button type="submit" name="submit" class="submit" style="margin-left:5rem;">Submit</button>
                     </form>

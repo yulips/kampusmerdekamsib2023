@@ -77,7 +77,7 @@
         <li class="nav-item">
           <a class="nav-link" href="relasi.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Relasi Tabel</span></a
+            <span>Tabel</span></a
           >
         </li>
 
@@ -417,6 +417,7 @@
                         <thead>
                             <th>No</th>
                             <th>Aksi</th>
+                            <th>Gambar</th>
                             <th>Judul</th>
                             <th>ISBN</th>
                             <th>Tahun</th>
@@ -439,6 +440,7 @@
                                     <a href="edit.php?isbn=<?php echo $data["isbn"]?>">Update</a>
                                     <a href="hapus.php?isbn=<?php echo $data["isbn"]?>">Hapus</a>
                                 </td>
+                                <td><?php echo $data["gambar"]?></td>
                                 <td><?php echo $data["judul"]?></td>
                                 <td><?php echo $data["isbn"]?></td>
                                 <td><?php echo $data["tahun"]?></td>

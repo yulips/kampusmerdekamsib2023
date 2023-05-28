@@ -65,6 +65,12 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"
     ></script>
 
+    <!-- Data Table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
     <script>
         $(document).ready(function () {
           $('#tabel').DataTable();
@@ -98,7 +104,7 @@
         <li class="nav-item">
           <a class="nav-link" href="relasi.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Relasi Tabel</span></a
+            <span>Tabel</span></a
           >
         </li>
 
@@ -427,65 +433,43 @@
             <div class="card shadow mb-4">
               <div class="card-body">
                 <div class="table-responsive">
-                  <!-- Tabs navs -->
-                    <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a
-                        class="nav-link active"
-                        id="ex1-tab-1"
-                        data-mdb-toggle="tab"
-                        href="#ex1-tabs-1"
-                        role="tab"
-                        aria-controls="ex1-tabs-1"
-                        aria-selected="true"
-                        >Detail Buku</a
-                        >
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a
-                        class="nav-link"
-                        id="ex1-tab-2"
-                        data-mdb-toggle="tab"
-                        href="#ex1-tabs-2"
-                        role="tab"
-                        aria-controls="ex1-tabs-2"
-                        aria-selected="false"
-                        >Kategori</a
-                        >
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a
-                        class="nav-link"
-                        id="ex1-tab-3"
-                        data-mdb-toggle="tab"
-                        href="#ex1-tabs-3"
-                        role="tab"
-                        aria-controls="ex1-tabs-3"
-                        aria-selected="false"
-                        >Jenis Buku</a
-                        >
-                    </li>
-                    </ul>
-                  <!-- Tabs navs -->
-
-                  <!-- Tabs content -->
-                  <div class="tab-content" id="ex1-content">
-                  <div
-                      class="tab-pane fade show active"
-                      id="ex1-tabs-1"
-                      role="tabpanel"
-                      aria-labelledby="ex1-tab-1"
-                  >
-                      <?php require("detail buku.php" )?>
-                  </div>
-                  <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
-                      <?php require("kategori.php" )?>
-                  </div>
-                  <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                      <?php require("jenis buku.php" )?>
-                  </div>
-                  </div>
-                  <!-- Tabs content --> 
+                <div class="tabel" style="margin-top:0.5rem; margin-left:2rem 7%; ">
+                    <table id="tabel" class="table table-striped" border="1" style="width:50%;">
+                        <thead>
+                            <th>No</th>
+                            <th>Aksi</th>
+                            <th>Gambar</th>
+                            <th>Judul</th>
+                            <th>ISBN</th>
+                            <th>Tahun</th>
+                            <th>Penerbit</th>
+                            <th>Pengarang</th>
+                        </thead>
+                        <tbody>
+                        <?php if(mysqli_num_rows($query) > 0) {?>
+                          <?php 
+                              $no = 1;
+                              while ($data= mysqli_fetch_array($query)) {      
+                          ?>
+                            <tr>
+                                <td><?php echo $no?></td>
+                                <td>
+                                    <a href="edit.php?isbn=<?php echo $data["isbn"]?>">Update</a>
+                                    <a href="hapus.php?isbn=<?php echo $data["isbn"]?>">Hapus</a>
+                                </td>
+                                <td><?php echo $data["gambar"]?></td>
+                                <td><?php echo $data["judul"]?></td>
+                                <td><?php echo $data["isbn"]?></td>
+                                <td><?php echo $data["tahun"]?></td>
+                                <td><?php echo $data["id_penerbit"]?></td>
+                                <td><?php echo $data["id_pengarang"]?></td>
+                                          
+                            </tr>
+                          <?php $no++; }?>
+                        <?php } ?>
+                        </tbody>                       
+                    </table>
+                </div>
                 </div>
               </div>
             </div>

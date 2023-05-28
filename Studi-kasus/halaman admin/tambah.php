@@ -35,12 +35,12 @@
 </head>
 <body style="background-color:blue;">
     <div class="container">
-        <div class="form" style="margin: 3rem 0 0 30rem;">
+        <div class="form" style="margin: 2rem 0 0 30rem;">
             <h2 style="color:white;">Tambah Data Buku</h2>
 
             <div class="wrapper">
                 <div class="card">
-                    <form id="form" action="proses.php" method="post" class="formhs" onsubmit="validasi()">
+                    <form id="form" action="proses tambah.php" method="post" class="formhs" enctype="multipart/form-data">
                         <div class="input-control">
                             <label for="isbn" >ISBN :</label>
                             <input type="text" name="isbn" id="isbn" required>
@@ -82,7 +82,11 @@
                         <div class="input-control">
                             <label for="harga_jual">Harga Jual   : </label>
                             <input type="text" name="harga_jual" id="harga_jual" required>
-                        </div>                 
+                        </div>       
+                        <div class="input-control">
+                            <label for="gambar">Gambar   : </label>
+                            <input type="file" name="gambar" id="gambar">
+                        </div>        
                         <button type="submit" name="submit" class="submit" style="margin-left:5rem;">Submit</button>
                     </form>
                 </div>

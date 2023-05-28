@@ -11,7 +11,17 @@
     $id_jenisBuku = $_POST["id_jenisBuku"];
     $stok = $_POST["stok"];
     $harga_jual = $_POST["harga_jual"];
+    
+    if(isset($_FILES)){
+        $gambar = $_FILES["gambar"]["name"];
+        $source = $_FILES["gambar"]["tmp_name"];
+        $folder = '../halaman index/img/buku/';
+        $target_file = $folder. basename($_FILES["gambar"]["name"]);
+        $uploadOk = true;
 
+            move_uploaded_file($source, $target_file);
+    }
+       
     $result = mysqli_query($conn, "UPDATE `buku` SET 
                                     isbn = '$isbn',
                                     judul = '$judul',
@@ -21,7 +31,8 @@
                                     id_kategori = '$id_kategori', 
                                     id_jenisBuku = '$id_jenisBuku',
                                     stok = '$stok', 
-                                    harga_jual = '$harga_jual'
+                                    harga_jual = '$harga_jual',
+                                    gambar = '$gambar'
 
                                     
                                     WHERE isbn = '$isbn'

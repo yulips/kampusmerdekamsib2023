@@ -6,7 +6,7 @@
 
     $result = mysqli_query($conn, "DELETE FROM buku WHERE `isbn` = '$isbn' " );
 
-    header("Location: listBuku.php");
+    header("Location: admin.php");
 
 
 ?>

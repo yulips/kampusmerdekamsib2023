@@ -34,8 +34,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
    
-        <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+      <!-- Feather Icons -->
+      <script src="https://unpkg.com/feather-icons"></script>
+
+      <script src="script.js"></script>
+      
    </head>
    <body>
       <!-- Navbar Start -->
@@ -247,21 +250,9 @@
                         </div>
                      </div>
                   </div>
-               </div>
 
-               <nav aria-label="Page navigation example" style="margin-top: 2rem;">
-                  <ul class="pagination justify-content-center">
-                     <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                     </li>
-                     <li class="page-item"><a class="page-link" href="#">1</a></li>
-                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                     <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                     </li>
-                  </ul>
-               </nav>
+                  <div class="seemore_bt"><a href="#">See More</a></div>
+               </div>
             </div>
          </div>
       </div>
@@ -393,5 +384,7 @@
       <script>
          feather.replace();
       </script>
+
+      
    </body>
 </html>
