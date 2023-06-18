@@ -91,6 +91,10 @@
                            <div class="banner_img" style="margin-top:0.5rem;"><img src="img/buku anak.jpg"></div>
                            <div class="banner_img" style="margin-top:0.5rem;"><img src="img/bestseller.jpg"></div>
                            <div class="banner_img" style="margin-top:0.5rem;"><img src="img/buku pengambangan.jpg"></div>
+                           <a href="https://www.facebook.com/sharer/sharer.php?app_id=583515763821277&sdk=joey&u=https://www.linkedin.com/in/yuliana-putri-setyowati-360134229/&display=popup&ref=plugin&src=share_button" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">
+                              <img src="img/facebook.png" alt="" style="margin-top:0.5rem;">
+                           </a>
+
                         </div>
                      </div>
                   </div>

@@ -38,6 +38,9 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Data Table -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
@@ -402,6 +405,10 @@
             <!-- Page Heading -->
             <h1 class="h3 mb-2 text-gray-800">Data Buku</h1>
 
+            <a class="facebook" target="blank">
+              <img src="../halaman index/img/facebook.png" alt="" style="margin:0.3rem 0 0.5rem 0; width:10rem;">
+            </a>
+            
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
               <div class="card-body">
@@ -538,5 +545,14 @@
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+
+    <script>
+      const link = 'https://github.com/';//encodeURI(window.location.href);
+      const msg = encodeURIComponent('Hey, I found this article');
+      const title = encodeURIComponent('Article or Post Title Here');
+
+      const fb = document.querySelector('.facebook');
+      fb.href = `https://www.facebook.com/share.php?u=${link}`;
+    </script>
   </body>
 </html>
